@@ -31,13 +31,16 @@ struct ContentView: View {
     var body: some View {
         
             
-           GridStack(rows: 4, columns: 3, {row,col in
-            Text(\(row,col))
-           })
+           GridStack(rows: 4, columns: 3) {row,col in
+            VStack{
+                
+            Text("(\(row),\(col))")
+            }
+           }
         
     }
 }
-}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
